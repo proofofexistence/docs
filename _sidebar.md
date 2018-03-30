@@ -2,5 +2,6 @@
 - [Get Started](get-started.md)
 - [Configuration](config.md)
 - [Deployment](deployment.md)
+- [API](api.md)
 - [FAQ](faq.md)
 - [Get In Touch](contact.md)
