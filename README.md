@@ -12,7 +12,15 @@ The original Blockchain notary service, offering instant, anonymous, distributed
 
 A service to anonymously and securely store an online distributed proof of existence for any document. **Your documents are NOT stored in our database or in the bitcoin blockchain**, so you don't have to worry about your data being accessed by others.
 
-What is stored is a cryptographic digest of the file, linked to the time in which you submitted the document. In this way, you can later certify that the data existed at that time.
+What is stored is a cryptographic digest of the file, linked to the time in which you submitted the document. In this way, you can later certify that the data existed at that time. This is the first online service allowing you to publicly prove that you have certain information without revealing the data or yourself, with a decentralized certification based on the [bitcoin network](http://bitcoin.org/).
+
+The key advantages are anonymity, privacy, and getting a decentralized
+proof which can't be erased or modified by anyone (third parties or
+governments). **Your document's existence is permanently validated by
+the blockchain even if this site is compromised or down**, so you don\'t
+depend or need to trust any central authority. All previous data
+timestamping solutions lack this freedom.
+
 
 ---
 
@@ -41,6 +49,7 @@ system will only recognize it if it is completely and fully the same
 document. The slightest change, and we\'ll recognize it is different,
 giving you the security that certified data can\'t be changed.
 
+---
 
 ## Technical foundations
 
@@ -53,11 +62,11 @@ scripting opcode](https://en.bitcoin.it/wiki/Script) that marks the
 transaction output as [provably
 unspendable](https://en.bitcoin.it/wiki/Script#Provably_Unspendable.2FPrunable_Outputs)
 and allows a small amount of data to be inserted, which in our case is
-the document\'s hash, plus a marker to identify all of our transactions.
+the document's hash, plus a marker to identify all of our transactions.
 
 Once the transaction is confirmed, the document is permanently certified
 and proven to exist at least as early as the time the transaction was
-confirmed. If the document hadn\'t existed at the time the transaction
+confirmed. If the document hadn't existed at the time the transaction
 entered the blockchain, it would have been impossible to embed its
 digest in the transaction (This is because of the hash function\'s
 property of being [second pre-image
@@ -69,20 +78,20 @@ This is why **once the bitcoin blockchain confirms the transaction
 generated for the document, its existence is proven, permanently, with
 no trust required**.
 
-If anyone wants to manually confirm the document\'s existence at the
+If anyone wants to manually confirm the document's existence at the
 timestamped time, they should just follow these steps:
 
--   Calculate the document\'s SHA256 digest.
+-   Calculate the document's SHA256 digest.
 -   Find a transaction in the bitcoin blockchain containing an
-    OP\_RETURN output with the document\'s hash prepended by our marker
+    OP_RETURN output with the document\'s hash prepended by our marker
     bytes, which are 0x444f4350524f4f46 (or \'DOCPROOF\' in ascii).
 -   Some online services like [Coin Secrets](http://coinsecrets.org/) or
-    [blockchain.info\'s
-    list](https://blockchain.info/strange-transactions) can help you
-    locate OP\_RETURN transactions more easily.
+    [blockchain.info's list](https://blockchain.info/strange-transactions) can help you locate OP_RETURN transactions more easily.
 -   The existence of that transaction in the blockchain proves that the
     document existed at the time the transaction got included into a
     block.
+
+---
 
 ## Press, Media & History
 
