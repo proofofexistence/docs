@@ -35,3 +35,5 @@ The private key for the *Incoming* wallet must be the `BITCOIN_HD_PRIVATE_KEY`.
 The public key for the *Outoing* wallet must be `BITCOIN_HD_PUBLIC_KEY`. The
 private key for the change wallet should be kept secret, and can be used later
 to sweep the funds.
+
+You can use [bcwallet](https://github.com/blockcypher/bcwallet/) to easily create a new wallet. 
