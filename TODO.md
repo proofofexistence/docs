@@ -11,3 +11,4 @@
   - [ ] Prepare install tutorial
 - [ ] Social
   - [ ] tweet
+  - [ ] star Github rep
