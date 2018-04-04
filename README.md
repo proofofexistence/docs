@@ -17,7 +17,7 @@ What is stored is a cryptographic digest of the file, linked to the time in whic
 The key advantages are anonymity, privacy, and getting a decentralized
 proof which can't be erased or modified by anyone (third parties or
 governments). **Your document's existence is permanently validated by
-the blockchain even if this site is compromised or down**, so you don\'t
+the blockchain even if this site is compromised or down**, so you don't
 depend or need to trust any central authority. All previous data
 timestamping solutions lack this freedom.
 
@@ -46,8 +46,8 @@ network to certify your data.
 
 If you store a proof for your document and later re-upload it, the
 system will only recognize it if it is completely and fully the same
-document. The slightest change, and we\'ll recognize it is different,
-giving you the security that certified data can\'t be changed.
+document. The slightest change, and we'll recognize it is different,
+giving you the security that certified data can't be changed.
 
 ---
 
@@ -68,7 +68,7 @@ Once the transaction is confirmed, the document is permanently certified
 and proven to exist at least as early as the time the transaction was
 confirmed. If the document hadn't existed at the time the transaction
 entered the blockchain, it would have been impossible to embed its
-digest in the transaction (This is because of the hash function\'s
+digest in the transaction (This is because of the hash function's
 property of being [second pre-image
 resistant](http://en.wikipedia.org/wiki/Cryptographic_hash_function#Properties)).
 Embedding some hash and then adapting a future document to match the
@@ -83,8 +83,8 @@ timestamped time, they should just follow these steps:
 
 -   Calculate the document's SHA256 digest.
 -   Find a transaction in the bitcoin blockchain containing an
-    OP_RETURN output with the document\'s hash prepended by our marker
-    bytes, which are 0x444f4350524f4f46 (or \'DOCPROOF\' in ascii).
+    OP_RETURN output with the document's hash prepended by our marker
+    bytes, which are 0x444f4350524f4f46 (or 'DOCPROOF' in ascii).
 -   Some online services like [Coin Secrets](http://coinsecrets.org/) or
     [blockchain.info's list](https://blockchain.info/strange-transactions) can help you locate OP_RETURN transactions more easily.
 -   The existence of that transaction in the blockchain proves that the

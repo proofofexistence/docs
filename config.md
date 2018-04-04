@@ -46,8 +46,31 @@ To get started, copy the `sample-local.yaml` to `local-development.yaml` and edi
 
 ---
 
-We use [node-config](https://github.com/lorenwest/node-config/wiki/Configuration-Files) to manage config files. This will generate a `.env` file in the root folder for environment variables. Any environment variables that are set when the app is run will override the values in the `.env` file.
+We use
+[node-config](https://github.com/lorenwest/node-config/wiki/Configuration-Files)
+to manage config files. You need to create a `local` config file with the
+desired values for your instance.
 
+In addition, some values may be overridden through environment variables:
+
+* `PORT` - The local port to run the app on.
+* `HOST` - The host or domain name. (`NOTE: you maybe need to use ngrok`)
+* `HOST_SCHEME` - e.g. `http` or `https`.
+* `HOST_PORT` - e.g. `80` or `443`.
+* `DB_PATH` - Path to the LevelDB directory.
+* `DOCUMENT_PRICE` - Document certification price in satoshis.
+* `FEE_MULTIPLIER` - Multiply estimated fee by this value to change its
+  priority. Defaults to `2`.
+* `BLOCKCYPHER_TOKEN` - BlockCypher API token, Register it [here](https://www.blockcypher.com/).
+* `BITCOIN_NETWORK` - Default bitcoin network for Bitcore. Options are `livenet`
+  or `testnet`.
+* `BITCOIN_HD_PRIVATE_KEY` - HD wallet private key to handle incoming payments.
+* `BITCOIN_HD_PUBLIC_KEY` - HD wallet public key to accept outgoing payments.
+* `MAGIC_NUMBER` - Token for some private API routes.
+* `MAIL_FROM` - Name/email to send as.
+* `MAIL_TO` - Email address to send notifications to.
+* `GMAIL_USER` - GMail account for sending notifications.
+* `GMAIL_PASS` - Gmail password for sending notifications.
 
 ### About wallets
 
