@@ -43,10 +43,15 @@ You can read [the docs](http://proofofexistence.github.io) to learn how to run a
 
 ---
 
+## Previous Press
+
+featured in Computerworld, Business Insider, and "Mastering Bitcoin" book
+
+---
 
 [Proofofexistence.com](http://proofofexistence.com) is website to host and support the community of users.
 
-Reach for us on [Twitter](https://twitter.com/profxstence).
+Reach for us on [Twitter](https://twitter.com/profxstence) or [Github](https://github.com/proofofexistence).
 
 ---
 
