@@ -21,12 +21,6 @@ npm install
 
 #### Configuration
 
-```sh
-npm run setup
-```
-
-Edit `.env` for environment variables. All values are **required**.
-
 Report to the [config page](config.md) to learn more about config variables.
 
 ### Building
@@ -45,9 +39,6 @@ The app will be listening at http://localhost:3003/.
 
 ### Testing
 
-Create a `.env.test` file with the desired configuration. It is recommended to
-change the database path to a `/tmp` location.
-
 Run the tests with:
 
 ```sh
@@ -55,9 +46,6 @@ npm test
 ```
 
 ### Development
-
-To run the app in development mode, create a `.env.dev` file with the desired
-configuration.
 
 You must use a **Testnet3 wallet** for the public and private keys. It is
 recommended to change the database path to a `/tmp` location.
@@ -94,7 +82,7 @@ To test all functionality, the dev app running locally needs to be able to
 receive web hook requests from the Internet.
 
 Sign up for an [ngrok](https://ngrok.com) account, download the client, and
-connect it to your account. Run `ngrok` with the port from your `.env.test`
+connect it to your account. Run `ngrok` with the port from your local config
 file:
 
 ```sh
@@ -111,7 +99,7 @@ NODE_ENV=development HOST=xxxxxxxx.ngrok.io HOST_SCHEME=https HOST_PORT=443 npm 
 
 Finally, to certify a document on the testnet blockchain:
 
-1. Create a `.env.dev` file with all your configuration
+1. Create a `config/local-development.yaml` file with all your configuration
 1. Set up a new testnet wallet and note down the Private Key WIF
 1. Fund the testnet wallet, e.g. using a Bitcoin testnet3 faucet
 1. Run the app locally in dev mode, with ngrok active

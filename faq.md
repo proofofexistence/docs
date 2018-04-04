@@ -10,8 +10,9 @@ When you start the wallet, choose the type of network, then you should get all o
 
 Because the core code use webhooks from BlockCypher, please check the status of webhooks
 
-See [List WebHooks Endpoint](https://www.blockcypher.com/dev/bitcoin/#using-webhooks), It usually happened with incorrect HOST or PORT setting in the .env
-
+See [List WebHooks
+Endpoint](https://www.blockcypher.com/dev/bitcoin/#using-webhooks). It usually
+happens with incorrect `host` or `port` setting in the config file.
 
 ### How do I extract funds from the app?
 
@@ -32,6 +33,6 @@ To extract the funds from the app you should:
 When prompted, enter these:
 
 * hdPrivateKey - the master extended private key that is paired with the
-  `BITCOIN_HD_PUBLIC_KEY` from the `.env` file
+  `outgoingPublicKey` from the config file
 * file - the `/tmp/proofofexistence-paths.txt` file generated in step 1
 * address - bitcoin address where you want to send funds to
