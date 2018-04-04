@@ -65,4 +65,4 @@ Reach for us on [Twitter](https://twitter.com/profxstence) or [Github](https://g
 
 ---
 
-Powered by [Poex](https://poex.io) ![](https://poex.io/img/poex-logo-white.svg)
+Powered by [Poex](https://poex.io)
