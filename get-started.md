@@ -26,7 +26,7 @@ npm install
 
 #### Configuration
 
-You need to create a config file to input your own configuration
+You need to create a config file to store your own server, BTC wallet and email information.
 
 ```sh
 cp config/sample-local.yaml config/local-development.yaml

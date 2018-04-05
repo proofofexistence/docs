@@ -1,16 +1,22 @@
 # Configuration
 
 
-To get started, copy the `sample-local.yaml` to `local-development.yaml` and edit it.
+To get started, you need to create a `local` config file with the
+desired values for your instance.
 
-**All values are required** - except for mail and nodemailer.
+Just copy the `sample-local.yaml` to `local-development.yaml` and edit it.
+
+```sh
+cp config/sample-local.yaml config/local-development.yaml
+```
 
 We use
 [node-config](https://github.com/lorenwest/node-config/wiki/Configuration-Files)
-to manage config files. You need to create a `local` config file with the
-desired values for your instance.
+to manage config files.
 
-## Config Sample
+## Config File
+
+**All values are required** - except for mail and nodemailer.
 
 ```yaml
 
