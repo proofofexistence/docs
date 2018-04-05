@@ -2,6 +2,7 @@
 - [News](news.md)
 - [Get Started](get-started.md)
 - [Configuration](config.md)
+- [Development](development.md)
 - [Deployment](deployment.md)
 - [API](api.md)
 - [FAQ](faq.md)
