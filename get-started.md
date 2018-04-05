@@ -116,3 +116,11 @@ Webhooks can be purged by running:
 ```sh
 node purge.js
 ```
+
+### Release a new version
+
+Interactive CLI tool to release versions
+
+```
+npm run release
+```
