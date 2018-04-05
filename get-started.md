@@ -29,7 +29,7 @@ npm install
 You need to create a config file to input your own configuration
 
 ```sh
-cp sample-local.yaml local-development.yaml
+cp config/sample-local.yaml config/local-development.yaml
 ```
 
 Report to the [config page](config.md) to learn more about config variables.
