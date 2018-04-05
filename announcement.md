@@ -40,7 +40,7 @@ Proof of Existence is a blockchain protocol that can be used to verify the unici
 
 ## Future milestones
 
-- [ ] More reactive UI
+- [ ] UI themes
 - [ ] Webhooks and call back
 - [ ] Improve testing
 - [ ] Reverse UI search

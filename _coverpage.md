@@ -2,7 +2,7 @@
 
 # Proof of Existence
 
-> An online service to prove the existence of documents
+> A web application to prove the existence of documents using the blockchain
 
 
 [GitHub](https://github.com/proofofexistence/proofofexistence)
