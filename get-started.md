@@ -4,14 +4,19 @@ You can run your own instance by following these steps
 
 ### Setup
 
-#### Mac OS X
+To use Proof of Existence, you need to have [Node JS](https://nodejs.org/en/) installed.  
+We recommend using the 8.11.1 version (LTS).  
 
-- Install brew: https://brew.sh/
-- brew install git (will trigger installation of Xcode, do it!)
-- Follow guide https://treehouse.github.io/installation-guides/mac/node-mac.html
-- Ready!
+#### Install Node
+
+You can download `node` from the official [Node JS website](https://nodejs.org/en/).
+
+For Mac OS X, you can also use [`brew`](http://brew.sh) - follow [this guide](https://treehouse.github.io/installation-guides/mac/node-mac.html).  
+To install a specific version, you can use [`nvm`](https://github.com/creationix/nvm) that will help you manage different installations of node.
 
 ### Installation
+
+Just download the code from Github and install the dependencies.
 
 ```sh
 git clone git@github.com:proofofexistence/proofofexistence.git
@@ -20,6 +25,12 @@ npm install
 ```
 
 #### Configuration
+
+You need to create a config file to input your own configuration
+
+```sh
+cp sample-local.yaml local-development.yaml
+```
 
 Report to the [config page](config.md) to learn more about config variables.
 
