@@ -93,12 +93,15 @@ timestamped time, they should just follow these steps:
 
 ---
 
-## Press, Media & History
+## Try it now
 
-[Proof of Existence Wikipedia
-Article](https://en.wikipedia.org/wiki/Proof_of_Existence)
+Read the [Get Started](get-started.md) section to run your own instance or try it [online](http://proofofexistence.com) first.
 
+
+You can reach for us on [Twitter](https://twitter.com/profxstence) or [Github](https://github.com/proofofexistence).
 
 ---
 
-Try it [online](http://proofofexistence.com) or [run your own instance](get-started.md).
+[Proofofexistence.com](http://proofofexistence.com) is website dedicated to host and support the community of users ot the PoE protocol.
+
+It is powered by [Poex](https://poex.io).
