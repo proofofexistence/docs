@@ -3,7 +3,7 @@
 - [Get Started](get-started.md)
 - [Configuration](config.md)
 - [Development](development.md)
-- [Deployment](deployment.md)
+- [Deployment with Docker](deployment.md)
 - [API](api.md)
 - [FAQ](faq.md)
 - [To do](todo.md)

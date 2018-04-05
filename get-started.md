@@ -24,6 +24,12 @@ cd proofofexistence
 npm install
 ```
 
+Now let's build the CSS assets before starting the app. 
+
+```sh
+npm run build
+```
+
 #### Configuration
 
 You need to create a config file to store your own server, BTC wallet and email information.
