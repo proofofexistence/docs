@@ -23,7 +23,7 @@ recommended to change the database path to a `/tmp` location.
 Run the app in dev mode with:
 
 ```sh
-NODE_ENV=dev npm run watch
+npm run watch
 ```
 
 ### Production
