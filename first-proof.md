@@ -173,12 +173,25 @@ Transaction 024b75b82ca7511c45eb85a3487d3fd69bee3410f49663 a5ae65ade47e210c8c
 As you can see in the record up there, the amount of the transaction is expressed in `bits`, which are microbitcoin (1 µBTC = 0,000001 BTC). The amount required by our install is 1 mBTC so 1000 bits.  
 NB: you can change this amount in the [config file](./config)
 
-
-
 ## Block validation
 
 The wallet has returned a transaction number. We can check on the  [Insight API](https://test-insight.proofofexistence.com/#/tx/024b75b82ca7511c45eb85a3487d3fd69bee3410f49663a5ae65ade47e210c8c) that the transaction has been properly recorded on the Bitcoin Test Network.
 
 ![Insight allow to check transactions](img/screenshot-insight.png)
 
-We can see that the status of the transaction still unconfirmed. We need to wait for confirmation by the peers in the network.
+We can see that the status of the transaction still unconfirmed. We need to wait for confirmation by the peers in the network. Once your transaction will be broadcasted, you will be redirected automatically.
+
+![Transaction waiting for validation](img/screenshot-transaction.png)
+
+## The proof is now in the blockchain
+
+Now our [final transaction](https://test-insight.bitpay.com/tx/76ff99d375fa58e1a5cf575660c4adb0aca650c16ac10038480026733746d0e3) has been processed. The hash data is embed in the blockchain
+
+![Congrats! ](img/screenshot-congrats.png)
+
+By [browsing the transaction](https://www.blocktrail.com/tBTC/tx/76ff99d375fa58e1a5cf575660c4adb0aca650c16ac10038480026733746d0e3#tx_messages), we can see that the OP_RETURN code contains our hash with a prefix.
+
+> OP_RETURN
+> 444f4350524f4f46**4ba3f5348e3efa55a74468a5c2997fb8b569a3ad3cf642734f818bfdc6b21d33**
+
+The prefix `444f4350524f4f46` is the HEX translation of `DOCPROOF` which is the official prefix for Proof of Existence protocol.
