@@ -1,6 +1,7 @@
 - [Home](/)
 - [News](news.md)
 - [Get Started](get-started.md)
+- [Tutorial: Your First Proof](first-proof.md)
 - [Configuration](config.md)
 - [Development](development.md)
 - [Deployment with Docker](deployment.md)
