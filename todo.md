@@ -2,7 +2,9 @@
 
 ## Release v0
 
-- [ ] Logo
+- Branding
+  - [ ] Logo
+  - [ ] Font
 - Social
   - [x] Twitter
   - [x] Facebook
@@ -12,7 +14,7 @@
   - [x] Config files process
   - [x] FAQ
 - Release
-  - [ ] Write announcement
+  - [x] Write announcement
   - [ ] Tweet
 
 ## Future milestones
