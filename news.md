@@ -4,7 +4,7 @@
 
 ## Proof of Existence open-source release
 
-**April, 05 2018**
+**April, 10 2018**
 
 #### The first fully-functional web service based on Proof of Existence protocol is now open-source!
 
