@@ -41,11 +41,6 @@ currencies:  different currencies accepted by the app
         documentPrice:  Document certification price in satoshis.
         feeMultiplier:  Multiply estimated fee by this value to change its priority. Defaults to `2`.
 
-services:
-  blockcypher:   We use blockcypher API
-    token:  BlockCypher API token, Register it [here](https://www.blockcypher.com/).
-    url`: default API url (https://api.blockcypher.com/v1)
-
 mail:
   from:  Name/email to send as.
   to:  Email address to send notifications to.
@@ -71,7 +66,6 @@ In addition, some values may be overridden through environment variables:
 * `DOCUMENT_PRICE` - Document certification price in satoshis.
 * `FEE_MULTIPLIER` - Multiply estimated fee by this value to change its
   priority. Defaults to `2`.
-* `BLOCKCYPHER_TOKEN` - BlockCypher API token, Register it [here](https://www.blockcypher.com/).
 * `BITCOIN_NETWORK` - Default bitcoin network for Bitcore. Options are `livenet` or `testnet`.
 * `BITCOIN_HD_PRIVATE_KEY` - HD wallet private key to handle incoming payments.
 * `BITCOIN_HD_PUBLIC_KEY` - HD wallet public key to accept outgoing payments.
@@ -94,7 +88,6 @@ transactions is sent.
 The private key for the *Incoming* wallet must be the `BITCOIN_HD_PRIVATE_KEY`.
 
 The public key for the *Outoing* wallet must be `BITCOIN_HD_PUBLIC_KEY`. The
-private key for the change wallet should be kept secret, and can be used later
-to sweep the funds.
+private key for the change wallet should be kept secret, and can be used later to sweep the funds.
 
-You can use [bcwallet](https://github.com/blockcypher/bcwallet/) to easily create a new wallet.
+See the [First Proof Tutorial](./first-proof.md) to learn more about wallets.
