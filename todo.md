@@ -27,5 +27,5 @@
   - [x] Config files process
   - [x] FAQ
 - Release
-  - [x] Write announcement
+  - [x] Write announcement https://proofofexistence.github.io/#/news?id=proof-of-existence-open-source-release
   - [ ] Tweet
