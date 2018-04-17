@@ -98,7 +98,7 @@ timestamped time, they should just follow these steps:
 Read the [Get Started](get-started.md) section to run your own instance or try it [online](http://proofofexistence.com) first.
 
 
-You can reach for us on [Twitter](https://twitter.com/profxstence) or [Github](https://github.com/proofofexistence).
+You can reach for us on [Twitter](https://twitter.com/proofxstence) or [Github](https://github.com/proofofexistence).
 
 ---
 
