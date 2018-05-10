@@ -46,25 +46,6 @@ To clean up:
 npm run clean
 ```
 
-#### ngrok
-
-To test all functionality, the dev app running locally needs to be able to
-receive web hook requests from the Internet.
-
-Sign up for an [ngrok](https://ngrok.com) account, download the client, and
-connect it to your account. Run `ngrok` with the port from your local config
-file:
-
-```sh
-ngrok http 3003
-```
-
-Note the "Forwarding" address and run the app with:
-
-```sh
-NODE_ENV=development HOST=xxxxxxxx.ngrok.io HOST_SCHEME=https HOST_PORT=443 npm run watch
-```
-
 #### Test Certifications
 
 Finally, to certify a document on the testnet blockchain:
@@ -78,14 +59,6 @@ Finally, to certify a document on the testnet blockchain:
 1. Send payment with `node scripts/payment.js PRIVATE_KEY_WIF TARGET_ADDRESS`
 1. Wait for the transaction to be confirmed on testnet blockchain
 
-
-### Webhooks
-
-Webhooks can be purged by running:
-
-```sh
-node purge.js
-```
 
 ### Release a new version
 
