@@ -23,7 +23,7 @@ to manage config files.
 app :
   url:
     scheme:  e.g. `http` or `https`.
-    host:  The host or domain name. (NOTE: you maybe need to use `ngrok`)
+    host:  The host or domain name.
     port:  The local port to run the app on.
   magicNumber:  Token for some private API routes.
   site:  name of your website
@@ -59,7 +59,7 @@ nodemailer: see [the docs](https://nodemailer.com/about/)
 In addition, some values may be overridden through environment variables:
 
 * `PORT` - The local port to run the app on.
-* `HOST` - The host or domain name. (`NOTE: you maybe need to use ngrok`)
+* `HOST` - The host or domain name
 * `HOST_SCHEME` - e.g. `http` or `https`.
 * `HOST_PORT` - e.g. `80` or `443`.
 * `DB_PATH` - Path to the LevelDB directory.
