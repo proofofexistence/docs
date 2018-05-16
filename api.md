@@ -16,6 +16,11 @@ It consists of the following two POST endpoints:
     get the payment address and price to confirm the document in the
     blockchain.
 
+As well as a GET endpoint:
+
+-   `/api/v1/docproofs/:hash`: used to search the blockchain for
+    all transactions that embed a docproof.
+
 Let's explain the API using an example:
 
 First we compute the SHA256 checksum hexdigest for a file we want to
@@ -106,6 +111,28 @@ see that field populated:
       "blockstamp":"2015-09-28 19:32:54",
       "price":{{ documentPrice }}
     }
+```
+
+Finally, you check search for all Bitcoin transactions that embed the
+document hash and confirm that your transaction is among them:
+
+```sh
+curl https://proofofexistence.com/api/v1/docproofs/15db6dbff590000ea13246e1c166802b690663c4e0635bfca78049d5a8762832
+
+{
+  "pagination": {},
+  "items": [
+    {
+      "blockhash": "000000000000000000be98e21e83c88f791a3fcaf9be217aab127c4a8e7a9341",
+      "blockheight": 376553,
+      "blocktime": 1443468774,
+      "confirmations": 146397,
+      "metadata": "444f4350524f4f4615db6dbff590000ea13246e1c166802b690663c4e0635bfca78049d5a8762832",
+      "txid": "f8db93646769eaf614cf5f26fb1bf1b78ee3f83ba6bebb5f7da9223f0022577d",
+      "outputIndex": 0
+    }
+  ]
+}
 ```
 
 That's it! If you have any questions/feedback/problems, [drop us an
