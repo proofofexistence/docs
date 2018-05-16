@@ -27,7 +27,7 @@ certify on the blockchain:
 Checking the status for a digest which was never submitted will give
 `"success": false`, as follows:
 
-    curl -d d=15db6dbff590000ea13246e1c166802b690663c4e0635bfca78049d5a8762832 URL_HOST/api/v1/status; echo
+    curl -d d=15db6dbff590000ea13246e1c166802b690663c4e0635bfca78049d5a8762832 https://proofofexistence.com/api/v1/status; echo
     {
       "success": false,
       "reason": "nonexistent"
@@ -39,7 +39,7 @@ minimum price (in satoshi, 0.00000001 BTC = 1 satoshi) to be paid to
 that address in order to get the document proof inserted in the
 blockchain.
 
-    curl -d d=15db6dbff590000ea13246e1c166802b690663c4e0635bfca78049d5a8762832 URL_HOST/api/v1/register; echo
+    curl -d d=15db6dbff590000ea13246e1c166802b690663c4e0635bfca78049d5a8762832 https://proofofexistence.com/api/v1/register; echo
     {
       "success":"true",
       "digest":"15db6dbff590000ea13246e1c166802b690663c4e0635bfca78049d5a8762832",
@@ -49,7 +49,7 @@ blockchain.
 
 If we now check the document's digest status, we get it's pending.
 
-    curl -d d=15db6dbff590000ea13246e1c166802b690663c4e0635bfca78049d5a8762832 URL_HOST/api/v1/status; echo
+    curl -d d=15db6dbff590000ea13246e1c166802b690663c4e0635bfca78049d5a8762832 https://proofofexistence.com/api/v1/status; echo
     {
       "digest":"15db6dbff590000ea13246e1c166802b690663c4e0635bfca78049d5a8762832",
       "payment_address":"1Zmxnd5CmLqhVnCbEcvxNxCoeqa2qhun3",
@@ -66,7 +66,7 @@ After making payment to indicated address
 (1Zmxnd5CmLqhVnCbEcvxNxCoeqa2qhun3) for a minimum value of {{
 documentPrice }} satoshis:
 
-    curl -d d=15db6dbff590000ea13246e1c166802b690663c4e0635bfca78049d5a8762832 URL_HOST/api/v1/status; echo
+    curl -d d=15db6dbff590000ea13246e1c166802b690663c4e0635bfca78049d5a8762832 https://proofofexistence.com/api/v1/status; echo
     {
       "digest":"15db6dbff590000ea13246e1c166802b690663c4e0635bfca78049d5a8762832",
       "payment_address":"1Zmxnd5CmLqhVnCbEcvxNxCoeqa2qhun3",
@@ -93,7 +93,7 @@ see that field populated:
 
 ```sh
 
-    curl -d d=15db6dbff590000ea13246e1c166802b690663c4e0635bfca78049d5a8762832 URL_HOST/api/v1/status; echo
+    curl -d d=15db6dbff590000ea13246e1c166802b690663c4e0635bfca78049d5a8762832 https://proofofexistence.com/api/v1/status; echo
     {
       "digest":"15db6dbff590000ea13246e1c166802b690663c4e0635bfca78049d5a8762832",
       "payment_address":"1Zmxnd5CmLqhVnCbEcvxNxCoeqa2qhun3",
