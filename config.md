@@ -91,3 +91,36 @@ The public key for the *Outoing* wallet must be `BITCOIN_HD_PUBLIC_KEY`. The
 private key for the change wallet should be kept secret, and can be used later to sweep the funds.
 
 See the [First Proof Tutorial](./first-proof.md) to learn more about wallets.
+
+# Insight API server
+
+In order to interact with the Bitcoin network, the software has to connect to a
+[Bitcore Node] server running these services:
+
+* [insight-api]
+* [specialops]
+
+Please consult the documentation on the GitHub repos for how to install and run
+bitcore-node with these services.
+
+The URLs for the Insight server can be changed in your local config file using
+the following settings:
+
+
+```yaml
+services:
+  insight:
+    mainnet:
+      url: https://insight.example.com
+      api: /api
+    testnet:
+      url: https://test-insight.example.com
+      api: /api
+```
+
+The `api` path must match the configuration `routePrefix` setting for your
+[insight-api] service.
+
+[Bitcore Node]: https://github.com/bitpay/bitcore-node
+[insight-api]: https://github.com/bitpay/insight-api
+[specialops]: https://github.com/poexio/specialops/
