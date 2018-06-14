@@ -28,10 +28,12 @@ npm run watch
 
 ### Production
 
+Create a `config/local-production.yaml` file with your configuration.
+
 Build the app:
 
 ```sh
-npm run build
+NODE_ENV=production npm run build
 ```
 
 The production app is run with:
