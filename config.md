@@ -16,42 +16,48 @@ to manage config files.
 
 ## Config File
 
-**All values are required** - except for mail and nodemailer.
-
 ```yaml
+# config/local-development.yaml
 
-app :
+app:
+  port:  # The local port to run the app on.
   url:
-    scheme:  e.g. `http` or `https`.
-    host:  The host or domain name.
-    port:  The local port to run the app on.
-  magicNumber:  Token for some private API routes.
-  site:  name of your website
-  logo:  absolute URL of your logo image
+    scheme:  # e.g. `http` or `https`.
+    host:  # The host or domain name.
+    port:  # The port of the site (e.g., `80` or `443`)
+  magicNumber:  # Token for some private API routes.
+  site:  # Name of your website.
+  logo:  # Absolute URL of your logo image.
+  defaultChain:  # e.g. `btc`
+  defaultNetwork:  # e.g. `mainnet` or `testnet`
 
 db:
-  path:  Path to the LevelDB directory.
+  path:  # Path to the LevelDB directory.
 
-currencies:  different currencies accepted by the app
-    btc:  default to BTC
-      defaultNetwork:  Default bitcoin network for Bitcore. Options are `livenet` or `testnet`.
-      networks:  list of networks to be used
-        incomingPrivateKey:  HD wallet private key to handle incoming payments.
-        outgoingPublicKey:  HD wallet public key to accept outgoing payments.
-        documentPrice:  Document certification price in satoshis.
-        feeMultiplier:  Multiply estimated fee by this value to change its priority. Defaults to `2`.
+chains:  # Supported chains
+  btc:  # Bitcoin
+    networks:  # List of configured networks.
+      mainnet:
+        incomingPrivateKey:  # HD wallet private key to handle incoming payments.
+        outgoingPublicKey:  # HD wallet public key to accept outgoing payments.
+        documentPrice:  # Document certification price in satoshis.
+        feeMultiplier:  # Multiply estimated fee by this value to change its priority. Defaults to `2`.
+      testnet:
+        incomingPrivateKey: tprvXXXXX
+        outgoingPublicKey: tpubXXXXX
+        documentPrice: 100000
+        feeMultiplier: 4
 
 mail:
-  from:  Name/email to send as.
-  to:  Email address to send notifications to.
+  from:  # Name/email to send as.
+  to:  # Email address to send notifications to.
 
-nodemailer: see [the docs](https://nodemailer.com/about/)
+nodemailer:  # see [the docs](https://nodemailer.com/about/)
   options:
-    service: Node service to send email
+    service: # Node service to send email, e.g. `Gmail`
     auth:
-      user:  GMail account for sending notifications.
-      pass:  Gmail password for sending notifications.
-
+      user:  # Account for sending notifications.
+      pass:  # Password for sending notifications.
 ```
 
 ## Environment variables
@@ -63,12 +69,8 @@ In addition, some values may be overridden through environment variables:
 * `HOST_SCHEME` - e.g. `http` or `https`.
 * `HOST_PORT` - e.g. `80` or `443`.
 * `DB_PATH` - Path to the LevelDB directory.
-* `DOCUMENT_PRICE` - Document certification price in satoshis.
-* `FEE_MULTIPLIER` - Multiply estimated fee by this value to change its
-  priority. Defaults to `2`.
+* `BITCOIN_CHAIN` - Default bitcoin chain for Bitcore. Options are `btc` or `bch`.
 * `BITCOIN_NETWORK` - Default bitcoin network for Bitcore. Options are `livenet` or `testnet`.
-* `BITCOIN_HD_PRIVATE_KEY` - HD wallet private key to handle incoming payments.
-* `BITCOIN_HD_PUBLIC_KEY` - HD wallet public key to accept outgoing payments.
 * `MAGIC_NUMBER` - Token for some private API routes.
 * `MAIL_FROM` - Name/email to send as.
 * `MAIL_TO` - Email address to send notifications to.
@@ -110,12 +112,13 @@ the following settings:
 ```yaml
 services:
   insight:
-    mainnet:
-      url: https://insight.example.com
-      api: /api
-    testnet:
-      url: https://test-insight.example.com
-      api: /api
+    btc:
+      mainnet:
+        url: https://insight.example.com
+        api: /api
+      testnet:
+        url: https://test-insight.example.com
+        api: /api
 ```
 
 The `api` path must match the configuration `routePrefix` setting for your
