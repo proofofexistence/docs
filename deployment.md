@@ -51,7 +51,7 @@ This is the task defination:
     "containerDefinitions": [
         {
             "name": "proofofexistence",
-            "image": "poexio/proofofexistence",
+            "image": "proofofexistence/proofofexistence",
             "essential": true,
             "portMappings": [
                 {
