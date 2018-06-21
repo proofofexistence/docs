@@ -40,6 +40,78 @@ docker stop proofofexistence
 docker exec --user node -w /home/node -ti proofofexistence bash
 ```
 
+## Deployment with [Amazon Elastic Container Service](https://aws.amazon.com/ecs/)
+
+If you don't know how to use Amazon ECS, you can read the [example](https://medium.com/boltops/gentle-introduction-to-how-aws-ecs-works-with-example-tutorial-cea3d27ce63d) first.
+
+This is the task defination:
+
+```json
+{
+    "containerDefinitions": [
+        {
+            "name": "proofofexistence",
+            "image": "poexio/proofofexistence",
+            "essential": true,
+            "portMappings": [
+                {
+                    "hostPort": "3003",
+                    "containerPort": "3003",
+                    "protocol": "tcp"
+                }
+            ],
+            "environment": [
+                {
+                    "name": "DB_PATH",
+                    "value": "/tmp/proofx-database-test"
+                },
+                {
+                    "name": "PORT",
+                    "value": "3003"
+                }
+            ],
+            "mountPoints": [
+                {
+                    "sourceVolume": "proofx-db",
+                    "containerPath": "/tmp/proofx-database-test",
+                    "readOnly": ""
+                }
+            ],
+            "volumesFrom": null,
+            "hostname": null,
+            "user": null,
+            "workingDirectory": null,
+            "extraHosts": null,
+            "logConfiguration": null,
+            "ulimits": null,
+            "dockerLabels": null,
+            "healthCheck": {
+                "interval": "60",
+                "timeout": "20",
+                "startPeriod": "20",
+                "retries": "2",
+                "command": [
+                    "cd /tmp;ls"
+                ]
+            }
+        }
+    ],
+    "volumes": [
+        {
+            "host": {
+                "sourcePath": "/proofx/proofx-database-test"
+            },
+            "name": "proofx-db"
+        }
+    ],
+    "networkMode": "bridge",
+    "memory": "1024",
+    "cpu": "1 vcpu",
+    "placementConstraints": [],
+    "family": "proofx-ecs",
+    "taskRoleArn": "arn:aws:iam::611798417555:role/ecsTaskExecutionRole"
+}
+```
 
 ## Build the Docker image yourself
 
