@@ -113,6 +113,10 @@ This is the task defination:
 }
 ```
 
+WARN: (MUST DO IT IF YOU CARE ABOUT YOUR DATABASE)
+
+- /proofx/proofx-database-test is the default volume in the instance, you can mount a large one if you need. and you must make it exists in the instance before you run the task.
+
 ## Build the Docker image yourself
 
 You can build the docker image from the `Dockerfile` from within the github rep by using the following command:
