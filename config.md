@@ -77,7 +77,13 @@ In addition, some values may be overridden through environment variables:
 * `GMAIL_USER` - GMail account for sending notifications.
 * `GMAIL_PASS` - Gmail password for sending notifications.
 
+## Dynamic Pricing
 
+In order to enable dynamic pricing, remove the `documentPrice` setting from the
+network configuration.
+
+The document price will be based on the current estimated fee, times the fee
+multiplier, and rounded up to the nearest 0.25 mBTC.
 
 ## About wallets
 
