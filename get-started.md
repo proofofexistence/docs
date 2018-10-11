@@ -35,7 +35,7 @@ npm run build
 You need to create a config file to store your own server, BTC wallet and email information.
 
 ```sh
-cp config/sample-local.yaml config/local-development.yaml
+cp config/test.yaml config/local-development.yaml
 ```
 
 Report to the [config page](config.md) to learn more about config variables.
@@ -46,4 +46,4 @@ Report to the [config page](config.md) to learn more about config variables.
 npm start
 ```
 
-The app will be listening at http://localhost:3003/.
+The app will be listening at http://localhost:3004/.
