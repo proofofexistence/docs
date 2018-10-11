@@ -175,7 +175,7 @@ NB: you can change this amount in the [config file](./config)
 
 ## Block validation
 
-The wallet has returned a transaction number. We can check on the  [Insight API](https://test-insight.proofofexistence.com/#/tx/024b75b82ca7511c45eb85a3487d3fd69bee3410f49663a5ae65ade47e210c8c) that the transaction has been properly recorded on the Bitcoin Test Network.
+The wallet has returned a transaction number. We can check on the  [Insight API](https://test-insight.bitpay.com/#/tx/024b75b82ca7511c45eb85a3487d3fd69bee3410f49663a5ae65ade47e210c8c) that the transaction has been properly recorded on the Bitcoin Test Network.
 
 ![Insight allow to check transactions](img/screenshot-insight.png)
 
