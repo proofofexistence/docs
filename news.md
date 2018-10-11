@@ -20,7 +20,7 @@ Uploading a document on PoE creates a unique identifier that can be used to cert
 
 Documents are NOT stored in a database or in the bitcoin blockchain, but you can easily verify the authenticity of any document by generating the identifier again and comparing with the one stored in the blockchain.
 
-Read [the docs](http://proofofexistence.github.io) to learn more and start to deploy your own instance.
+Read [the docs](https://docs.proofofexistence.com) to learn more and start to deploy your own instance.
 
 ---
 
