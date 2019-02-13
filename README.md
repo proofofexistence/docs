@@ -4,7 +4,7 @@ The original Blockchain notary service, offering instant, anonymous, distributed
 
 <br />
 <br />
-![Screenshot from Proof of Existence online service](screenshot.png)
+<img src="screenshot.png" alt="Screenshot from Proof of Existence online service">
 
 ---
 
