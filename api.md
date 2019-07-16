@@ -16,7 +16,7 @@ It consists of the following two POST endpoints:
     get the payment address and price to confirm the document in the
     blockchain.
 
-As well as a GET endpoint:
+As well as a GET endpoint if [specialops](https://github.com/poexio/specialops) service was enable:
 
 -   `/api/v1/docproofs/:hash`: used to search the blockchain for
     all transactions that embed a docproof.
