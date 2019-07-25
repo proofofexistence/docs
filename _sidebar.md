@@ -7,5 +7,4 @@
 - [Deployment with Docker](deployment.md)
 - [API](api.md)
 - [FAQ](faq.md)
-- [To do](todo.md)
 - [Get In Touch](contact.md)
