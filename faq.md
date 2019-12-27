@@ -36,3 +36,19 @@ When prompted, enter these:
   `outgoingPublicKey` from the config file
 * file - the `/tmp/proofofexistence-paths.txt` file generated in step 1
 * address - bitcoin address where you want to send funds to
+
+NOTE: If you want to extract the funds through the cli without any prompt,
+
+please put the hdPrivateKey, file, address in a config file, then issue the command:
+
+```
+npm run sweep < config_file
+```
+
+* Example of config_file
+
+```
+xprvxxxxxxxx
+/tmp/proofofexistence-paths.txt
+17nWxxxxxxx
+```
